@@ -1,0 +1,574 @@
+{
+	"info": {
+		"_postman_id": "573d89c3-95a9-4ace-a156-7bc0d423b98c",
+		"name": "assignment_api_collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "required_fields",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\" : \"\",\r\n    \"lastname\" : \"\",\r\n    \"email\":\"\",\r\n    \"phonenumber\" : \"\",\r\n    \"address\":\"\",\r\n    \"date_of_birth\":\"\",\r\n    \"is_vaccinated\": \"\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/data-store",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"data-store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vaccine_fields_no",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\" : \"Hiren\",\r\n    \"lastname\" : \"Kadavala\",\r\n    \"email\":\"kadavalahiren40@gmail.com\",\r\n    \"phonenumber\" : \"4561237180\",\r\n    \"address\":\"makraba,sarkhej\",\r\n    \"date_of_birth\":\"2022/12/05\",\r\n    \"is_vaccinated\": \"no\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/data-store",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"data-store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vaccined_assignment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\" : \"Hiren\",\r\n    \"lastname\" : \"Kadavala\",\r\n    \"email\":\"kadavalahiren40@gmail.com\",\r\n    \"phonenumber\" : \"4561237180\",\r\n    \"address\":\"makraba,sarkhej\",\r\n    \"date_of_birth\":\"2022/12/05\",\r\n    \"is_vaccinated\": \"no\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/data-store",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"data-store"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "date_format_not_valide",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\" : \"Hiren\",\r\n    \"lastname\" : \"Kadavala\",\r\n    \"email\":\"kadavalahiren40@gmail.com\",\r\n    \"phonenumber\" : \"4561237180\",\r\n    \"address\":\"makraba,sarkhej\",\r\n    \"date_of_birth\":\"10/02/2022\",\r\n    \"is_vaccinated\": \"no\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/data-store",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"data-store"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 24 Jan 2022 10:22:49 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 24 Jan 2022 10:22:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status-code\": 422,\n    \"validatation-error\": {\n        \"date_of_birth\": [\n            \"The date of birth does not match the format Y/m/d.\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "validation_for_required_fields",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\" : \"\",\r\n    \"lastname\" : \"\",\r\n    \"email\":\" \",\r\n    \"phonenumber\" : \"\",\r\n    \"address\":\"\",\r\n    \"date_of_birth\":\"\",\r\n    \"is_vaccinated\": \"\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/data-store",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"data-store"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 24 Jan 2022 10:21:41 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 24 Jan 2022 10:21:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status-code\": 422,\n    \"validatation-error\": {\n        \"firstname\": [\n            \"FirstName is Required.\"\n        ],\n        \"lastname\": [\n            \"LastName is Required.\"\n        ],\n        \"email\": [\n            \"The email field is required.\"\n        ],\n        \"phonenumber\": [\n            \"The phonenumber field is required.\"\n        ],\n        \"is_vaccinated\": [\n            \"The vaccine field is required.\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "vaccined_yes_vaccine_name_required",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\" : \"Hiren\",\r\n    \"lastname\" : \"Kadavala\",\r\n    \"email\":\"kadavalahiren40@gmail.com\",\r\n    \"phonenumber\" : \"4561237180\",\r\n    \"address\":\"makraba,sarkhej\",\r\n    \"date_of_birth\":\"2022/01/22\",\r\n    \"is_vaccinated\": \"yes\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/data-store",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"data-store"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 24 Jan 2022 10:23:45 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 24 Jan 2022 10:23:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status-code\": 422,\n    \"validatation-error\": {\n        \"vaccine_name\": [\n            \"The vaccine name field is required when is vaccinated is yes.\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "vaccined_no_other_data_show",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\" : \"Hiren\",\r\n    \"lastname\" : \"Kadavala\",\r\n    \"email\":\"kadavalahiren40@gmail.com\",\r\n    \"phonenumber\" : \"4561237180\",\r\n    \"address\":\"makraba,sarkhej\",\r\n    \"date_of_birth\":\"2022/01/22\",\r\n    \"is_vaccinated\": \"no\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/data-store",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"data-store"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 24 Jan 2022 10:24:22 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 24 Jan 2022 10:24:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statuscode\": 200,\n    \"message\": \"Data Send Successfully.\",\n    \"Data\": {\n        \"firstname\": \"Hiren\",\n        \"lastname\": \"Kadavala\",\n        \"email\": \"kadavalahiren40@gmail.com\",\n        \"phoneno\": \"4561237180\",\n        \"address\": \"makraba,sarkhej\",\n        \"date_of_birth\": \"2022/01/22\",\n        \"is_vaccinated\": \"no\"\n    }\n}"
+				},
+				{
+					"name": "phone_number_maxmin_10digit",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\" : \"Hiren\",\r\n    \"lastname\" : \"Kadavala\",\r\n    \"email\":\"kadavalahiren40@gmail.com\",\r\n    \"phonenumber\" : \"864067892\",\r\n    \"address\":\"makraba,sarkhej\",\r\n    \"date_of_birth\":\"2022/01/22\",\r\n    \"is_vaccinated\": \"no\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/data-store",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"data-store"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 24 Jan 2022 10:25:45 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 24 Jan 2022 10:25:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status-code\": 422,\n    \"validatation-error\": {\n        \"phonenumber\": [\n            \"PhoneNumber Min 10 Digits Required\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "future_date_not_select",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\" : \"Hiren\",\r\n    \"lastname\" : \"Kadavala\",\r\n    \"email\":\"kadavalahiren40@gmail.com\",\r\n    \"phonenumber\" : \"8640678922\",\r\n    \"address\":\"makraba,sarkhej\",\r\n    \"date_of_birth\":\"2022/01/25\",\r\n    \"is_vaccinated\": \"no\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/data-store",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"data-store"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 24 Jan 2022 10:47:41 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 24 Jan 2022 10:47:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status-code\": 422,\n    \"validatation-error\": {\n        \"date_of_birth\": [\n            \"The date of birth must be a date before tomorrow.\"\n        ]\n    }\n}"
+				}
+			]
+		}
+	]
+}
