@@ -99,7 +99,7 @@ class DemoController extends Controller
                 if($request->has('is_vaccinated')){
                     if ($request->is_vaccinated == 'yes') {         // is_vaccinated - YES
                         if($request->has('vaccine_name')){
-                            if ($request->vaccine_name == 'COVAXIN' && $request->vaccine_name == 'COVISHIELD' ) {
+                            if ($request->vaccine_name == 'COVAXIN' || $request->vaccine_name == 'COVISHIELD' ) {
                                 $vaccine_name = $request->vaccine_name;
                             }
              
